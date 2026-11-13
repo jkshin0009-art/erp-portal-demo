@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>통합 업무 시연</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<style>
+:root { --accent:#1a9d6f; --accent-dark:#148059; --deep:#0e5c41; --weak:#e8f6f0; --ink:#22312b; --sub:#6b7280; --line:#e3e6ea; --bg:#f5f8f6; --card:#fff; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --ink:#e6efe9; --sub:#a3b0a9; --line:#2c3a33; --bg:#121815; --card:#1a221e; --weak:#173328; } }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.7 'Pretendard','Malgun Gothic','Segoe UI','Apple SD Gothic Neo',sans-serif; }
+header { background:var(--deep); color:#fff; padding:40px 16px 34px; }
+.wrap { max-width:880px; margin:0 auto; padding:0 16px; }
+header h1 { margin:0 0 6px; font-size:28px; }
+header p { margin:0; color:#cfe8dc; }
+main { padding:28px 0 48px; }
+h2 { font-size:18px; margin:32px 0 12px; }
+h2::before { content:'■'; color:var(--accent); font-size:10px; margin-right:8px; vertical-align:3px; }
+.apps { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:12px; }
+.app { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px; }
+.app b { display:block; font-size:16px; margin-bottom:4px; }
+.app span { color:var(--sub); font-size:13px; }
+ol.steps { padding-left:22px; } ol.steps li { margin:8px 0; }
+.note { background:var(--weak); border-left:3px solid var(--accent); padding:12px 14px; border-radius:6px; color:var(--ink); }
+table { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--line); border-radius:8px; overflow:hidden; font-size:14px; }
+th, td { text-align:left; padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
+th { background:var(--weak); font-weight:600; white-space:nowrap; }
+footer { color:var(--sub); font-size:13px; padding:24px 0 40px; border-top:1px solid var(--line); }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>통합 업무 시연</h1>
+  <p>그룹웨어 · 회계 · 인사급여를 한 화면 · 한 로그인으로 — 외부 검증 안내</p>
+</div></header>
+<main class="wrap">
+  <h2>무엇인가</h2>
+  <p>예전 프로그램(웹 그룹웨어와 델파이로 된 회계·인사급여)을 새로 지어 하나로 합친 업무 프로그램입니다. 화면 위 띠의 탭으로 세 프로그램을 오가고, 로그인은 한 번만 합니다. 화면 모양은 한 회사 프로그램처럼 같은 기준으로 맞췄습니다.</p>
+  <div class="apps">
+    <div class="app"><b>그룹웨어</b><span>전자결재 · 게시판 · 일정 · 인사 · 근태 · 총무 · 재무 · 자금 (343화면)</span></div>
+    <div class="app"><b>회계</b><span>전표 · 장부 · 결산 · 부가세 · 어음 · 감가상각</span></div>
+    <div class="app"><b>인사급여</b><span>인사 · 급여 · 근태(그룹웨어 근태와 연동) · 각종 양식 — 짓는 중</span></div>
+    <div class="app"><b>금융·세무 (준비 중)</b><span>계좌조회 · 카드내역 · 전자계산서</span></div>
+  </div>
+
+  <h2>시험하는 법</h2>
+  <ol class="steps">
+    <li><b>Tailscale</b>을 설치하고 로그인합니다 — <a href="https://tailscale.com/download">tailscale.com/download</a></li>
+    <li>따로 받은 <b>기기 공유 초대 링크</b>를 열어 수락합니다. 시연 서버는 이 초대를 받은 사람에게만 열립니다.</li>
+    <li>초대와 함께 받은 <b>시연 주소</b>를 브라우저로 열고, 따로 받은 <b>시연 계정</b>으로 로그인합니다.</li>
+    <li>점검 목록·사용 설명서를 보며 써 보고, 결함은 <b>검증 저장소의 이슈 양식</b>으로 알려 주세요(저장소 초대를 함께 보냅니다).</li>
+  </ol>
+  <p class="note">시연 데이터는 이름·주민번호·사업자번호·주소·전화·계좌를 가린 <b>사본</b>입니다. 마음껏 넣고 고치고 지워도 됩니다(망가지면 처음 상태로 되돌립니다).</p>
+
+  <h2>먼저 보면 좋은 것</h2>
+  <table>
+    <tr><th>1순위</th><td>사람 손으로만 알 수 있는 것 — 한글 입력, 엑셀 붙여넣기, 브라우저·확대 배율·좁은 창</td></tr>
+    <tr><th>2순위</th><td>업무 흐름 — 결재 상신 → 승인·반려, 전표 → 장부, 근태 → 급여 반영, 출력 미리보기·PDF</td></tr>
+    <tr><th>3순위</th><td>모양과 속도 — 숫자 정렬·쉼표, 글자 잘림, 화면 여는 속도</td></tr>
+  </table>
+
+  <h2>알려진 한계</h2>
+  <ul>
+    <li>전자세금계산서 실제 발행·국세청 실제 신고는 하지 않습니다(신고 파일 만들기까지).</li>
+    <li>은행·메일·바깥 시스템으로 보내는 단추 일부는 «연동 요청함»에 쌓기만 합니다.</li>
+    <li>시연 서버는 운영자 PC에서 돕니다. 그 PC가 꺼져 있으면 접속되지 않습니다.</li>
+  </ul>
+</main>
+<footer class="wrap">소스와 시연 주소는 공개하지 않습니다. 이 페이지는 안내만 담습니다.</footer>
+</body>
+</html>
