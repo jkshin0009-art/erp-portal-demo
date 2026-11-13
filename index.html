@@ -27,6 +27,8 @@ table { width:100%; border-collapse:collapse; background:var(--card); border:1px
 th, td { text-align:left; padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
 th { background:var(--weak); font-weight:600; white-space:nowrap; }
 footer { color:var(--sub); font-size:13px; padding:24px 0 40px; border-top:1px solid var(--line); }
+  a.open{display:inline-block;margin-top:6px;padding:8px 16px;border-radius:4px;background:#1a9d6f;color:#fff;text-decoration:none;font-weight:600}
+  a.open:hover{background:#148059}
 </style>
 </head>
 <body>
@@ -46,10 +48,11 @@ footer { color:var(--sub); font-size:13px; padding:24px 0 40px; border-top:1px s
 
   <h2>시험하는 법</h2>
   <ol class="steps">
-    <li><b>Tailscale</b>을 설치하고 로그인합니다(구글·마이크로소프트·애플 계정으로 가입 — 무료) — <a href="https://tailscale.com/download">tailscale.com/download</a></li>
-    <li>따로 받은 <b>기기 공유 초대 링크</b>를 열어 수락합니다. 시연 서버는 이 초대를 받은 사람에게만 열립니다.</li>
-    <li>초대와 함께 받은 <b>시연 주소</b>를 브라우저로 열고, 따로 받은 <b>시연 계정</b>으로 로그인합니다.</li>
-    <li>써 보다가 이상한 점은 시연 화면 <b>맨 위 띠의 «결함 알리기»</b>로 바로 보내 주세요 — GitHub 계정이 없어도 됩니다(운영자가 받아 정리합니다). 점검 목록·사용 설명서는 초대와 함께 받습니다.</li>
+    <li>아래 <b>«시연 열기»</b>를 누릅니다 — 따로 설치할 것도, GitHub 계정도 필요 없습니다.
+      <p><a class="open" href="https://desktop-ai.tail17cde2.ts.net/">시연 열기 →</a></p></li>
+    <li>따로 받은 <b>시연 계정</b>으로 로그인합니다(로그인을 여러 번 틀리면 15분 동안 막힙니다).</li>
+    <li>화면 맨 위 띠의 <b>«도움말»</b>에 세 앱 사용 설명서와 점검 목록이 있습니다.</li>
+    <li>써 보다가 이상한 점은 시연 화면 <b>맨 위 띠의 «결함 알리기»</b>로 바로 보내 주세요 — GitHub 계정이 없어도 됩니다(운영자가 받아 정리합니다).</li>
   </ol>
   <p class="note">시연 데이터는 이름·주민번호·사업자번호·주소·전화·계좌를 가린 <b>사본</b>입니다. 마음껏 넣고 고치고 지워도 됩니다(망가지면 처음 상태로 되돌립니다).</p>
 
@@ -67,6 +70,6 @@ footer { color:var(--sub); font-size:13px; padding:24px 0 40px; border-top:1px s
     <li>시연 서버는 운영자 PC에서 돕니다. 그 PC가 꺼져 있으면 접속되지 않습니다.</li>
   </ul>
 </main>
-<footer class="wrap">소스와 시연 주소는 공개하지 않습니다. 이 페이지는 안내만 담습니다.</footer>
+<footer class="wrap">소스는 공개하지 않습니다. 시연 계정은 따로 받은 사람만 씁니다.</footer>
 </body>
 </html>
